@@ -817,6 +817,11 @@ NamedValueSet JavascriptEngine::getRootObjectProperties() const
     return getRootObject().getProperties();
 }
 
+void *JavascriptEngine::getQuickJSContext() const
+{
+    return impl->getEngine().getQuickJSContext();
+}
+
 //==============================================================================
 static bool hasProperty (qjs::JSContext* ctx, qjs::JSValueConst object, const char* name)
 {

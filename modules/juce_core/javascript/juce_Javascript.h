@@ -403,6 +403,8 @@ public:
     /** Provides access to the set of properties of the root namespace object. */
     NamedValueSet getRootObjectProperties() const;
 
+    void *getQuickJSContext() const;
+
 private:
     class Impl;
     std::unique_ptr<Impl> impl;
